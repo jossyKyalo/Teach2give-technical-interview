@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <link rel="stylesheet" href="FAQ.css">
+</head>
+<body>
+<div class="accordion">
+  <div class="faq-box">
+    <h2 style="text-align: left;"><span style="color: #663399;">✦</span> FAQs</h2>
+    <div class="accordion-item">
+        <div class="accordion-header">What is Frontend Mentor, and how will it help me?</div>
+        <div class="accordion-content"> 
+            Frontend Mentor offers realistic coding challenges to help developers improve their front-end coding skills with projects in HTML, CSS and JavaScript.
+            It's suitable for all levels and ideal for portfolio building.
+        </div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">Is Frontend Mentor free?</div>
+        <div class="accordion-content">Yes, Frontend Mentor has free and premium challenges for different levels.</div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">Can I use Frontend Mentor projects in my portfolio?</div>
+        <div class="accordion-content">Absolutely! It's a great way to show off your skills and include completed projects in your portfolio.</div>
+    </div>
+    <div class="accordion-item">
+        <div class="accordion-header">How can I get help if I'm stuck on a challenge?</div>
+        <div class="accordion-content"> 
+            The Frontend Mentor community is very supportive. You can ask for help in their forums, Slack channel, 
+            or Discord server, and get guidance from others who have solved similar challenges.
+        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+        header.addEventListener('click', function() {
+            const content = this.nextElementSibling;
+
+            document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
+            document.querySelectorAll('.accordion-header').forEach(h => h.classList.remove('active'))
+             
+            const isVisible = content.style.display === 'block';
+            content.style.display = isVisible ? 'none' : 'block';
+            if (!isVisible) this.classList.add('active');
+        });
+    });
+</script>
+
+</body>
+</html>
