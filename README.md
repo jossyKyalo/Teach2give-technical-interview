@@ -82,7 +82,7 @@ For the **Capitalize Words Program**, you will need **Python** installed to run 
 1. **Capitalize Words Program**:
     - To run the Python program that capitalizes each word in a string, run the following command:
       ```bash
-      python  algorithmicthinkingAndDatastructures.py
+      python  algorithmicthinkinganddatastructures.py
       ```
     - This will process your string and display the string with each word capitalized.
 
