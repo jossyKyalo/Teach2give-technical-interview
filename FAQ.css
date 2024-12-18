@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
@@ -16,18 +16,34 @@ body{
     }
     
     .accordion {
-        background:  linear-gradient(to bottom, #2E1A3F 50%, #F3E8FF 50%);
+        background:  linear-gradient(to bottom,
+         #2E1A3F 0%,
+         #2E1A3F 30%,
+           #F3E8FF 30%,
+           #F3E8FF 100%
+         );
         border: 2px solid #e0e0e0;
         border-radius: 10px;
         padding: 20px;
         margin: 20px;
         position: relative;
-        width: 800px;
+        width: 900px;
         height: 80vh;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         align-items: center;
         justify-content: center;
         display: flex;
+    }
+    .curved-line{
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 30%;  
+      background: url('/Vector 92.png') no-repeat center center;
+      color: #663399;
+      background-size: cover;
     }
     .faq-box {
         background-color: white;
@@ -35,9 +51,17 @@ body{
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         width: 400px;
-         
+        position: relative;
+        z-index: 10;
       }
-      h2{
+      .star{
+        font-size: 32px;
+        font-weight: bold;
+        color:#663399;
+        margin-bottom: 20px;
+        padding: 10px;
+      }
+      .after-star{
         font-size: 32px;
         font-weight: bold;
         color:#321d52 ;
@@ -61,10 +85,10 @@ body{
     .accordion-header {
         padding: 15px 20px;
         cursor: default;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: bold;
         background: none; 
-        background-color: #f1f1f1;
+        background-color: #ffffff;
         border: none;
         border-radius: 8px;
         position: relative;
@@ -79,16 +103,17 @@ body{
     .accordion-header::after {
         content: '+';  
         display: flex;
-        justify-content: center;
         align-items: center;
-        font-size: 18px;
+        justify-content: center;
+        font-size: 14px;
         font-weight: bold;
         color: #ffffff;
-        width: 24px;  
-        height: 24px;
+        width: 20px;  
+        height: 20px;
         background-color: #663399;
+        padding: 0px;
+        margin: 0px;
         border-radius: 50%;
-        margin-left: 10px;
         transition: transform 0.3s ease;
     }
     .accordion-header.active::after {
