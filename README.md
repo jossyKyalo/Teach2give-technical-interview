@@ -1,4 +1,4 @@
-# Programming Challenges: Algorithmic Thinking & Frontend Development
+# Challenges: Algorithmic Thinking & Frontend Development
 
 This repository includes solutions for two separate challenges: **Capitalize Words Program** and **FAQ Accordion**.
 
